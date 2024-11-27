@@ -10,9 +10,14 @@
   elements takes 5 seconds. Given what you know about the asymptotic complexity
   of search in a binary search tree, how long would you guess finding the same
   element in a search tree with 10,000 elements takes? Explain your reasoning.
+    1. We know that search time of a binary search tree is dependent on the height of the tree. Assuming that the binary search tree is balanced, we can infer that the height of the 1,000 element tree is $log_2(1000)$ or ~10. Assuming the binary search tree with 10,000 elements is also balanced then the height of that tree would be $log_2(10000)$ or ~13. Since the height determines the search time, we can estimate the search time of the larger tree by comparison.. If it takes 5 seconds to search a binary tree of depth 10, then we can find the calculation for the search time of a binary search tree of depth 13 by multiplying the search time of the 1,000 element tree by the scalar of the two trees, $(13/10) * 5 = 6.5$ seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
+    1. It could be that the search tree isn't balanced leading to a more linear runtime than the logarithmic runtime we would typically expect.
+    2. It could also be 
 
 Add your answers to this markdown file.
+
+https://iq.opengenus.org/time-and-space-complexity-of-binary-search-tree/
